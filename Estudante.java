@@ -19,5 +19,27 @@ public class Estudante {
         }
     }
 
+    public double calculaMedia() {
+        double soma = 0;
+
+        for (int i = 0; i < notas.length; i++) {
+            soma += notas[i];
+        }
+
+        return soma / notas.length;
+    }
+
+    public double menorNota() {
+        double menor = notas[0];
+
+        for (int i = 1; i < notas.length; i++) {
+            if (notas[i] < menor) {
+                menor = notas[i];
+            }
+        }
+
+        return menor;
+    }
+
 }
 
