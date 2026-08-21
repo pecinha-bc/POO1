@@ -30,6 +30,16 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Estudante estudante1 = new Estudante("Breno");
+        Estudante estudante2 = new Estudante("Carlos");
+        Estudante estudante3 = new Estudante("Lucas");
+
+        Estudante[] estudantes = {
+            estudante1,
+            estudante2,
+            estudante3
+        };
+
     }
 
 }
