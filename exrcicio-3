@@ -58,6 +58,18 @@ public class Main {
             estudante3
         };
 
+        Estudante[] estudantesAprovados = aprovados(estudantes);
+
+        if (estudantesAprovados != null) {
+            System.out.println("Estudantes aprovados:");
+
+            for (Estudante estudante : estudantesAprovados) {
+                System.out.println(estudante.getNome() + " - Media: " + estudante.calculaMedia());
+            }
+        } else {
+            System.out.println("Nenhum estudante foi aprovado.");
+        }
+
     }
 
 }
