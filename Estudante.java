@@ -29,6 +29,18 @@ public class Estudante {
         return soma / notas.length;
     }
 
+    public double calculaMedia(int[] pesos) {
+        double soma = 0;
+        int somaPesos = 0;
+
+        for (int i = 0; i < notas.length; i++) {
+            soma += notas[i] * pesos[i];
+            somaPesos += pesos[i];
+        }
+
+        return soma / somaPesos;
+    }
+
     public String getNome() {
         return nome;
     }
