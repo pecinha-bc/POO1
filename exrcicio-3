@@ -1,0 +1,75 @@
+public class Main {
+
+    public static Estudante[] aprovados(Estudante[] estudantes) {
+
+        int quantidadeAprovados = 0;
+
+        for (Estudante estudante : estudantes) {
+            if (estudante.calculaMedia() >= 6) {
+                quantidadeAprovados++;
+            }
+        }
+
+        if (quantidadeAprovados == 0) {
+            return null;
+        }
+
+        Estudante[] estudantesAprovados = new Estudante[quantidadeAprovados];
+
+        int posicao = 0;
+
+        for (Estudante estudante : estudantes) {
+            if (estudante.calculaMedia() >= 6) {
+                estudantesAprovados[posicao] = estudante;
+                posicao++;
+            }
+        }
+
+        return estudantesAprovados;
+    }
+
+    public static void main(String[] args) {
+
+        Estudante estudante1 = new Estudante("Breno");
+        Estudante estudante2 = new Estudante("Carlos");
+        Estudante estudante3 = new Estudante("Lucas");
+
+        estudante1.getNotas()[0] = 8;
+        estudante1.getNotas()[1] = 7;
+        estudante1.getNotas()[2] = 9;
+        estudante1.getNotas()[3] = 8;
+        estudante1.getNotas()[4] = 7;
+
+        estudante2.getNotas()[0] = 5;
+        estudante2.getNotas()[1] = 4;
+        estudante2.getNotas()[2] = 6;
+        estudante2.getNotas()[3] = 5;
+        estudante2.getNotas()[4] = 4;
+
+        estudante3.getNotas()[0] = 7;
+        estudante3.getNotas()[1] = 6;
+        estudante3.getNotas()[2] = 8;
+        estudante3.getNotas()[3] = 7;
+        estudante3.getNotas()[4] = 9;
+
+        Estudante[] estudantes = {
+            estudante1,
+            estudante2,
+            estudante3
+        };
+
+        Estudante[] estudantesAprovados = aprovados(estudantes);
+
+        if (estudantesAprovados != null) {
+            System.out.println("Estudantes aprovados:");
+
+            for (Estudante estudante : estudantesAprovados) {
+                System.out.println(estudante.getNome() + " - Media: " + estudante.calculaMedia());
+            }
+        } else {
+            System.out.println("Nenhum estudante foi aprovado.");
+        }
+
+    }
+
+}
