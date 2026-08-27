@@ -25,6 +25,10 @@ public class Main {
         }
 
         System.out.println("Media ponderada: " + estudante.calculaMedia(pesos));
+
+        int[] pesosIguais = {1, 1, 1, 1, 1};
+
+        System.out.println("Media ponderada com pesos iguais: " + estudante.calculaMedia(pesosIguais));
     }
 
 }
