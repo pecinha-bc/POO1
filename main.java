@@ -17,7 +17,12 @@ public class Main {
         System.out.println("Media: " + estudante.calculaMedia());
         System.out.println("Menor nota: " + estudante.menorNota());
 
-        int[] pesos = {1, 2, 3, 4, 5};
+        int[] pesos = {2, 3, 4, 5, 6};
+
+        System.out.println("Pesos:");
+        for (int peso : pesos) {
+            System.out.println(peso);
+        }
 
         System.out.println("Media ponderada: " + estudante.calculaMedia(pesos));
     }
